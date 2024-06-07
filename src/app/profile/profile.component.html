@@ -1,0 +1,75 @@
+<section>
+  <div class="container my-5">
+    <h2 class="text-center py-5">Profile</h2>
+    <div class="card p-5">
+      <div class="row">
+        <form [formGroup]="UserForm" class="row  ">
+          <div class="col-md-6 py-5">
+            <div class="form-floating mb-3">
+              <input
+                [disabled]="true"
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Enter your First Name"
+              />
+              <label for="floatingInput">{{ userInfo.firstName }}</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                [disabled]="true"
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder=" Email"
+              />
+              <label for="floatingInput">{{ userInfo.email }}</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                [disabled]="true"
+                type="tel"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Enter your Phone Number"
+              />
+              <label for="floatingInput">{{ userInfo.phone }}</label>
+            </div>
+          </div>
+          <div class="col-md-6 py-5">
+            <div class="form-floating mb-3">
+              <input
+                [disabled]="true"
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Enter your Last Name"
+              />
+              <label for="floatingInput">{{ userInfo.lastName }}</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                [disabled]="true"
+                type="number"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Enter your Age"
+              />
+              <label for="floatingInput">{{ userInfo.age }}</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                [disabled]="true"
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Enter your birth Date"
+              />
+              <label for="floatingInput">{{ userInfo.birthDate }}</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

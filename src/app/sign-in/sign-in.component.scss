@@ -1,0 +1,28 @@
+section {
+  background: linear-gradient(#f8d442, #feaf00);
+
+  height: 110vh;
+}
+.sign-in {
+  height: 600px;
+  width: 450px;
+}
+button {
+  background-color: #feaf00;
+  border: none;
+}
+.sign-in h3::before {
+  content: "";
+  height: 30px;
+  background-color: #f8d442;
+  width: 5px;
+  position: absolute;
+  bottom: 38%;
+  left: 1px;
+}
+.fa-solid{
+  position: absolute;
+  top: 43px;
+  left: 330px;
+
+}

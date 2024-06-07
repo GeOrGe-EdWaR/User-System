@@ -1,0 +1,76 @@
+<section>
+  <div class="container my-5">
+    <h2 class="text-center py-5">add User</h2>
+    <div class="card p-5">
+      <form [formGroup]="AddUserForm" (ngSubmit)="onSubmit(AddUserForm)">
+        <div class="row">
+          <div class="col-md-6 py-5">
+            <div class="form-floating mb-3">
+              <input
+                formControlName="firstName"
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Enter your First Name"
+              />
+              <label for="floatingInput">Enter your First Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                formControlName="email"
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder=" Email"
+              />
+              <label for="floatingInput">Enter your Email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                formControlName="phone"
+                type="tel"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Enter your Phone Number"
+              />
+              <label for="floatingInput">Enter your Phone Number</label>
+            </div>
+          </div>
+          <div class="col-md-6 py-5">
+            <div class="form-floating mb-3">
+              <input
+                formControlName="lastName"
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Enter your Last Name"
+              />
+              <label for="floatingInput">Enter your Last Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                formControlName="Age"
+                type="number"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Enter your Age"
+              />
+              <label for="floatingInput">Enter your Age</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                formControlName="birthDate"
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Enter your birth Date"
+              />
+              <label for="floatingInput">Enter your birth Date</label>
+            </div>
+          </div>
+          <button class="btn btn-warning w-100">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

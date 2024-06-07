@@ -1,0 +1,70 @@
+<section class="d-flex align-items-center justify-content-center w-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 m-auto">
+        <form [formGroup]="signinform" (ngSubmit)="login(signinform)">
+          <div class="sign-in bg-light rounded-4 p-5">
+            <h3 class="text-dark text-center py-5 position-relative">
+              User Management System
+            </h3>
+            <h4 class="text-center">Sign In</h4>
+            <P class="text-secondary text-center"
+              >Enter your credentials to access your account</P
+            >
+            <div *ngIf="ErrorMessage" class="alert alert-danger">
+              {{ ErrorMessage }}
+            </div>
+            <div class="mb-3">
+              <div class="form-floating mb-3">
+                <input
+                  formControlName="username"
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="mb-3">
+                <div class="form-floating">
+                  <i
+                    (click)="isHide = !isHide"
+                    [class]="
+                      isHide
+                        ? 'fa-solid fa-eye-slash position-relative'
+                        : 'fa-solid fa-eye position-relative'
+                    "
+                    class="slash position-relative"
+                  ></i>
+                  <input
+                    formControlName="password"
+                    [type]="isHide ? 'password' : 'text'"
+                    class="form-control"
+                    id="floatingPassword"
+                    placeholder="Password"
+                  />
+                  <label for="floatingPassword">Password</label>
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    class="my-3 w-100 text-light rounded-pill p-2"
+                  >
+                    SIGN IN
+                  </button>
+                  <button
+                    (click)="clear()"
+                    type="button"
+                    class="w-100 text-light rounded-pill p-2"
+                  >
+                    cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
